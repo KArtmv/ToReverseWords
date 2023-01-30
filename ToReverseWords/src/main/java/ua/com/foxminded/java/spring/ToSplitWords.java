@@ -1,6 +1,6 @@
 package ua.com.foxminded.java.spring;
 
-public class ToReverseWords {
+public class ToSplitWords {
 
 	public static String reverseWord(String inputWords) {
 		int i = 0;
