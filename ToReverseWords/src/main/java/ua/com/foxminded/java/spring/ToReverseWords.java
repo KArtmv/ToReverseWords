@@ -6,10 +6,15 @@ public class ToReverseWords {
 		int i = 0;
 		String arrayWords[] = inputWords.split(" ");
 		String outputWords[] = new String[arrayWords.length];
+		StringBuilder reverse = new StringBuilder();
+		String str = new String();
 
 		for (String words : arrayWords) {
-			String reverse = new StringBuilder(words).reverse().toString();
-			outputWords[i] = reverse;
+
+			reverse = ReverseOfWord.reverseOfWord(words);
+			str = InputByIndex.inputByIndex(reverse, words);
+
+			outputWords[i] = str;
 			i++;
 		}
 
