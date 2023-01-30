@@ -5,7 +5,7 @@ import java.util.regex.Pattern;
 
 public class InputByIndex {
 
-	public static String inputByIndex(StringBuilder letters, String srsWord) {
+	public static String inputByIndex(StringBuilder word, String srsWord) {
 
 		String cutSymbolsRegex = "([^a-zA-Z]+)";
 
@@ -19,10 +19,10 @@ public class InputByIndex {
 		while (matcher.find()) {
 			indexOfSymbols = matcher.start();
 			symbols = matcher.group(1);
-			letters.insert(indexOfSymbols, symbols);
+			word.insert(indexOfSymbols, symbols);
 		}
 
-		return letters.toString();
+		return word.toString();
 
 	}
 

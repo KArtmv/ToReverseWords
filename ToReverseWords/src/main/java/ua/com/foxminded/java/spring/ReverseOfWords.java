@@ -11,7 +11,7 @@ public class ReverseOfWords {
 		sc.close();
 		
 		
-		System.out.println(ToReverseWords.reverseWord(inputWord));
+		System.out.println(ToSplitWords.reverseWord(inputWord));
 		
 		
 		

@@ -5,25 +5,25 @@ import java.util.regex.Pattern;
 
 public class ReverseOfWord {
 
-	public static StringBuilder reverseOfWord(String inputWords) {
+	public static StringBuilder reverseOfWord(String inputWord) {
 
-		String cutLettersRegex = "([a-zA-Z]+)";
+		String cutWordRegex = "([a-zA-Z]+)";
 
-		StringBuilder letters = new StringBuilder();
+		StringBuilder word = new StringBuilder();
 
-		Pattern pattern = Pattern.compile(cutLettersRegex);
-		Matcher matcher = pattern.matcher(inputWords);
+		Pattern pattern = Pattern.compile(cutWordRegex);
+		Matcher matcher = pattern.matcher(inputWord);
 
 		while (matcher.find()) {
 			if (matcher.group(1) != null) {
-				letters.append(new StringBuilder(matcher.group(1)));
+				word.append(new StringBuilder(matcher.group(1)));
 			}
 
 		}
 
-		letters.reverse();
+		word.reverse();
 
-		return letters;
+		return word;
 
 	}
 }
