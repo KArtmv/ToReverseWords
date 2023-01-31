@@ -13,11 +13,8 @@ public class ReverseWord {
 		StringJoiner stringJoiner = new StringJoiner(" ");
 
 		for (String words : arrayWords) {
-
 			StringBuilder reverse = ReverseOfWord.reverseOfWord(words);
-			String str = InputByIndex.inputByIndex(reverse, words);
-
-			stringJoiner.add(str);
+			stringJoiner.add(InputByIndex.inputByIndex(reverse, words));
 		}
 		return stringJoiner.toString();
 	}
