@@ -6,9 +6,7 @@ import java.util.regex.Pattern;
 public class ReverseOfWord {
 
 	public static StringBuilder reverseOfWord(String inputWord) {
-
 		String cutWordRegex = "([a-zA-Z]+)";
-
 		StringBuilder word = new StringBuilder();
 
 		Pattern pattern = Pattern.compile(cutWordRegex);
@@ -16,14 +14,12 @@ public class ReverseOfWord {
 
 		while (matcher.find()) {
 			if (matcher.group(1) != null) {
-				word.append(new StringBuilder(matcher.group(1)));
+				word.append(matcher.group(1));
 			}
 
 		}
 
-		word.reverse();
-
-		return word;
+		return word.reverse();
 
 	}
 }
