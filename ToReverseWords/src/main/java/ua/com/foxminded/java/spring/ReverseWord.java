@@ -5,6 +5,10 @@ import java.util.StringJoiner;
 public class ReverseWord {
 
 	public static String reverseWord(String inputWords) {
+		if (inputWords.equals("")) {
+			System.out.println("Insert not empty value");
+		}
+
 		String[] arrayWords = inputWords.split(" ");
 		StringJoiner stringJoiner = new StringJoiner(" ");
 
@@ -14,9 +18,7 @@ public class ReverseWord {
 			String str = InputByIndex.inputByIndex(reverse, words);
 
 			stringJoiner.add(str);
-
 		}
-
 		return stringJoiner.toString();
 	}
 
