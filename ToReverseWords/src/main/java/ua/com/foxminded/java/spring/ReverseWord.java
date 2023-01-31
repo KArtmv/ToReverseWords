@@ -1,24 +1,23 @@
 package ua.com.foxminded.java.spring;
 
-public class ToSplitWords {
+import java.util.StringJoiner;
+
+public class ReverseWord {
 
 	public static String reverseWord(String inputWords) {
-		int i = 0;
-		String arrayWords[] = inputWords.split(" ");
-		String outputWords[] = new String[arrayWords.length];
-		StringBuilder reverse = new StringBuilder();
-		String str = new String();
+		String[] arrayWords = inputWords.split(" ");
+		StringJoiner stringJoiner = new StringJoiner(" ");
 
 		for (String words : arrayWords) {
 
-			reverse = ReverseOfWord.reverseOfWord(words);
-			str = InputByIndex.inputByIndex(reverse, words);
+			StringBuilder reverse = ReverseOfWord.reverseOfWord(words);
+			String str = InputByIndex.inputByIndex(reverse, words);
 
-			outputWords[i] = str;
-			i++;
+			stringJoiner.add(str);
+
 		}
 
-		return String.join(" ", outputWords);
+		return stringJoiner.toString();
 	}
 
 }
