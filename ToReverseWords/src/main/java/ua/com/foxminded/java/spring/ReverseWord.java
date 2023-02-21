@@ -4,10 +4,12 @@ import java.util.StringJoiner;
 
 public class ReverseWord {
 
-	public  String reverseWord(String inputWords) {
-		StringJoiner stringJoiner = new StringJoiner(" ");
-		if (inputWords != null && !inputWords.isEmpty() && !inputWords.equals(" ")) {
+	public String reverseWord(String inputWords) {
+		if (inputWords == null || inputWords.equals("") || inputWords.matches("\\s+")) {
+			throw new IllegalArgumentException("input should not be null");
+		}
 
+		StringJoiner stringJoiner = new StringJoiner(" ");
 		ReverseOfWord toReverse = new ReverseOfWord();
 		InputByIndex inputByIndex = new InputByIndex();
 
@@ -18,11 +20,8 @@ public class ReverseWord {
 			inputByIndex.inputByIndex(wordIsReversed, words);
 			stringJoiner.add(wordIsReversed);
 
-			}
-		} else {
-			System.out.println("Insert a non-empty value");
-
 		}
+
 		return stringJoiner.toString();
 	}
 

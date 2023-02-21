@@ -13,7 +13,7 @@ public class ReverseOfWord {
 		Matcher matcher = pattern.matcher(inputWord);
 
 		while (matcher.find()) {
-				word.append(matcher.group());
+			word.append(matcher.group());
 
 		}
 
